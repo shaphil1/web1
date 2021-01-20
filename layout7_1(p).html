@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout5_practice</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        #wrap {width: 1200px; margin: 0 auto;}
+        header {width: 100%; height: 100px; background: #93e2cf;}
+        .banner {width: 100%; height: 300px; background: #76cab5;}
+        .side {float: left; width: 30%; height: 500px; background: #5db39e;}
+        .con1 {float: left; width: 70%; height: 250px; background: #449c86;}
+        .con2 {float: left; width: 70%; height: 250px; background: #358974;}
+        .article_wrap {width: 100%; overflow: hidden;}
+        .article1 {float: left; width: 30%; height: 270px; background: #216a58;}
+        .article2 {float: left; width: 40%; height: 270px; background: #165646;}
+        .article3 {float: left; width: 30%; height: 270px; background: #0f4538;}
+        section {overflow: hidden; width: 90%; background: #5db39e; padding: 5%}
+        section > div {float: left; width: 23%; margin: 1%; height: 230px; background: #0f4538; border-radius: 20px;}
+        footer {clear:both; width: 100%; height: 100px; background: #083026;}
+        
+        @media (max-width: 1220px){
+            #wrap {width: 100%;}
+            .article1 {width: 50%; height: 330px;}
+            .article2 {width: 50%; height: 330px;}
+            .article3 {display: none;}
+            section > div {width: 31.3333%;}
+            section > div:nth-child(4){display: none;}
+        }
+        @media (max-width: 768px){
+            .banner {height: 250px;}
+            .article1 {width: 100%;}
+            .article2 {width: 100%;}
+            section > div {height: 200px;}
+        }
+        @media (max-width: 480px){
+            .side {width: 100%; height: 150px;}
+            .con1 {width: 100%; height: 180px;}
+            .con2 {width: 100%; height: 180px;}
+            section > div {width: 98%; height: 170px;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <div class="banner"></div>
+        <div class="side"></div>
+        <div class="con1"></div>
+        <div class="con2"></div>
+        <div class="article_wrap">
+            <article class="article1"></article>
+            <article class="article2"></article>
+            <article class="article3"></article>
+        </div>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <footer></footer>
+    </div>    
+</body>
+</html>
